@@ -4,6 +4,7 @@ const browserHeadless = false;
 const browserWidth = 1280;
 const browserHeight = 880;
 const urlGame = 'https://www.realtimecolors.com/game';
+const nextLoop = 0;
 
 const playHSLColorGame = async () => {
   const browser = await puppeteer.launch({ 
@@ -35,7 +36,7 @@ const playHSLColorGame = async () => {
         const squares = await page.$$('div.square');
         await squares[uniqueColorData.index].click();
         
-        await new Promise(resolve => setTimeout(resolve, 0));
+        await new Promise(resolve => setTimeout(resolve, nextLoop));
       } else {
         console.log('Could not find a unique colored square');
         await new Promise(resolve => setTimeout(resolve, 500));
