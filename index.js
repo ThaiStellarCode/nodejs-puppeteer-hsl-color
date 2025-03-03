@@ -5,8 +5,6 @@ const browserWidth = 1280;
 const browserHeight = 880;
 const urlGame = 'https://www.realtimecolors.com/game';
 
-playHSLColorGame();
-
 const playHSLColorGame = async () => {
   const browser = await puppeteer.launch({ 
     headless: browserHeadless,
@@ -47,3 +45,5 @@ const playHSLColorGame = async () => {
     console.error('Error:', error);
   }
 };
+
+playHSLColorGame();

@@ -7,9 +7,6 @@ const browserWidth = 1280; //กำหนดขนาดความกว้า
 const browserHeight = 880; //กำหนดขนาดความสูงของเว็บ
 const urlGame = 'https://www.realtimecolors.com/game'; //กำหนดเว็บไซต์ที่จะให้เปิด
 
-//* 3. รันฟังก์ชั่น playHSLColorGame
-playHSLColorGame();
-
 const playHSLColorGame = async () => {
   //* 4. เริ่มต้นทำงาน puppeteer ให้เปิด browser ขึ้นมาใหม่
   const browser = await puppeteer.launch({ 
@@ -67,3 +64,6 @@ const playHSLColorGame = async () => {
     console.error('Error:', error);
   }
 };
+
+//* 3. รันฟังก์ชั่น playHSLColorGame
+playHSLColorGame();
